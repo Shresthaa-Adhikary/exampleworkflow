@@ -17,5 +17,5 @@ jobs:
       - name: run docker container
         run: docker run -d --name imgcn ubuntu-node
       - name: stop container
-        run: docker stop imgcr
+        run: docker stop imgcn
   
