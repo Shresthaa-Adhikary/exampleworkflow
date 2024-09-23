@@ -12,6 +12,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
+      - name: docker daemon start
+        run: sudo service docker start
       - name: build docker image
         run: docker build -t ubuntu-node .
       - name: run docker container
