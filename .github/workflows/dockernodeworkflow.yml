@@ -16,6 +16,10 @@ jobs:
         run: docker build -t ubuntu-node .
       - name: run docker container
         run: docker run -d --name imgcn ubuntu-node
+      - name: execute shell
+        run: docker exec -it imgcn bash 
+      - name: check node version
+        run: node --version      
       - name: stop container
         run: docker stop imgcn
   
