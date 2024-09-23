@@ -15,7 +15,7 @@ jobs:
       - name: build docker image
         run: docker build -t ubuntu-node .
       - name: run docker container
-        run: docker run -d --name imgcr ubuntu-node
+        run: docker run -d --name imgcn ubuntu-node
       - name: stop container
         run: docker stop imgcr
   
