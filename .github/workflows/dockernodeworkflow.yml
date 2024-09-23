@@ -17,9 +17,7 @@ jobs:
       - name: run docker container
         run: docker run -d --name imgcn ubuntu-node
       - name: execute shell
-        run: docker exec -it imgcn bash 
-      - name: check node version
-        run: node --version      
+        run: docker exec imgcn bash -c "node --version"
       - name: stop container
         run: docker stop imgcn
   
